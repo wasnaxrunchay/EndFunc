@@ -1,0 +1,2 @@
+# EndFunc
+$aWords[0] = 2;If two words, assume this is the first and last name in that order             $sFirstnames = $aWords[1]         Case $aWords[0] > 2;If more than two words, all except the last are first names             For $n = 1 To $aWords[0] - 2                 $sFirstnames &amp;= $aWords[$n] &amp; " "             Next             $sFirstnames &amp;= $aWords[$aWords[0] - 1]     EndSelect     Dim $aFirstnamesLast[] = [$sFirstnames, $sLastname]     Return $aFirstnamesLast EndFunc   ;==>splitfirstlastname
